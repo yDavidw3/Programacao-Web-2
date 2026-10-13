@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    background-color: #0f172a;
+    margin: 0;
+}
+
+
+.conteiner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    height: 100vh;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    background-color: #1e293b;
+    width: 250px;
+    padding: 20px;
+    gap: 10px;
+    border-radius: 15px;
+    align-items: center;
+}
+
+
+form h1 {
+    font-family: "Roboto", sans-serif;
+    color: #f1f5f9;
+}
+
+
+form label {
+    font-family: "Funnel Display", sans-serif;
+    color: #cbd5f5;
+}
+
+
+form input {
+    padding: 10px;
+    width: 160px;
+    border-radius: 15px;
+    border: none;
+    background-color: #334155;
+    color: #f8fafc;
+    font-family: "Roboto", sans-serif;
+}
+
+
+button {
+    font-family: "Roboto", sans-serif;
+    padding: 12px;
+    width: 120px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s;
+    background-color: #3b82f6;
+    color: #ffffff;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    background-color: #2563eb;
+}
+
+.divResultado {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #1e293b;
+    width: 300px;
+    padding: 20px;
+    border-radius: 15px;
+    animation: aparecer 0.8s ease forwards;
+    opacity: 0;
+}
+
+.pResultado {
+    text-align: center;
+    font-family: "Funnel Display", sans-serif;
+    color: #e2e8f0;
+}
+
+@keyframes aparecer {
+    to {
+        transform: translateY(-15px);
+        opacity: 1;
+    }
+}

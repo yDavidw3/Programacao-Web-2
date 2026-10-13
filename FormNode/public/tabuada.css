@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+background-color: #0f172a; /* fundo escuro elegante */
+}
+
+form {
+margin-top: 50px;
+display: flex;
+flex-direction: column;
+background-color: #1e293b; /* card escuro */
+max-width: 300px;
+width: 250px;
+height: 250px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+border-radius: 15px;
+}
+
+form h1 {
+font-family: "Roboto", sans-serif;
+color: #f1f5f9; /* branco suave */
+}
+
+form label {
+font-family: "Funnel Display", sans-serif;
+color: #cbd5f5; /* cinza azulado claro */
+}
+
+form ::placeholder {
+font-family: "Roboto", sans-serif;
+color: #94a3b8; /* placeholder discreto */
+}
+
+form input {
+padding: 10px;
+width: 150px;
+border-radius: 15px;
+border: 0 solid;
+background-color: #334155; /* input escuro */
+color: #f8fafc; /* texto claro */
+}
+
+button {
+font-family: "Roboto", sans-serif;
+padding: 12px;
+width:100px;
+border-radius: 15px;
+border: 0 solid;
+cursor: pointer;
+transition: 0.2s;
+background-color: #3b82f6; /* azul elegante */
+color: #ffffff;
+}
+
+button:hover {
+transform: translateY(-2px);
+background-color: #2563eb; /* azul mais forte no hover */
+}
+
+.divResultado {
+ margin-top: 30px;
+display: grid;
+grid-template-columns: 1fr 1fr;
+background-color: #1e293b; /* igual ao form */
+width: 400px;
+max-width: 700px;
+height: 260px;
+justify-content: center;
+align-items: center;
+border-radius: 15px;
+animation: aparecer 0.8s ease forwards;
+opacity: 0;
+}
+
+
+@keyframes aparecer {
+    to {
+        transform: translateY(-15px);
+        opacity: 1;
+    }
+}
+
+.pResultado {
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+font-family: "Funnel Display", sans-serif ;
+ color: #e2e8f0;  
+}
+
+.conteiner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

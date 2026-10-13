@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sorteio</title>
+    <link rel="stylesheet" href="/sorteio.css">
+</head>
+<body>
+
+    <h1>🎰 NUMBER BET 🎰</h1>
+
+    <form action="/sorteio" method="POST">
+        <h3>Digite um número de 1 a 6 e tente acertar:</h3>
+        <h4>Você tem 3 tentativas</h4>
+
+        <input type="number" name="numero" placeholder="Digite aqui" required>
+
+        <button type="submit">🎯 Testar sorte</button>
+    </form>
+
+    <p><%= resultado %></p>
+
+    <a href="/sorteio">
+        <button type="button">Reiniciar</button>
+    </a>
+
+</body>
+</html>

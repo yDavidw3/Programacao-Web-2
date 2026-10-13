@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci</title>
+    <link rel="stylesheet" href="/fibonacci.css">
+</head>
+<body>
+
+<div class="conteiner">
+
+    <form action="/resultadoFibonacci" method="POST">
+        <h1>Fibonacci</h1>
+
+        <label for="num">Número:</label>
+        <input type="number" id="num" name="num" required>
+
+        <button type="submit">Calcular</button>
+    </form>
+
+    <% if (resultado) { %>
+    <div class="divResultado">
+        <h2 class="pResultado">Resultado:</h2>
+        <p class="pResultado"><%= resultado.join(', ') %></p>
+    </div>
+    <% } %>
+
+</div>
+
+</body>
+</html>

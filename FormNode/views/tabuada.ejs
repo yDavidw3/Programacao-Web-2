@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+    <link rel="stylesheet" href="/tabuada.css">
+</head>
+<body>
+
+    <div class="conteiner">
+
+    <form action="/resultadoTabuada" method="POST">
+        <h1>Tabuada</h1>
+        <label for="">Digite o número </label>
+        <input type="number" name="num" id="" placeholder="Ex: 5" required>
+
+        <button type="submit">Enviar   </button>
+    </form>
+
+    <% if (num) { %>
+
+    <div class="divResultado">
+    <% for(let i = 1; i<=10; i++) { %>
+        <% let resultado = num * i %>
+        <p class="pResultado"> <%= num %> x <%= i %> = <%= resultado %></p>
+        <% } %>
+    </div>
+    <% } %>
+</div>
+
+</body>
+</html>

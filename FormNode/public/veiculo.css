@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* FUNDO DA PÁGINA */
+body {
+background: linear-gradient(135deg, #0b1220, #1e293b); /* fundo mais profundo */
+}
+
+form {
+margin-top: 30  px;
+display: flex;
+flex-direction: column;
+background-color: #ffffff;
+max-width: 500px;
+width: 350px;
+height: 850px;  
+justify-content: center;
+align-items: center;
+gap: 10px;
+border-radius: 15px;
+}
+
+form h1 {
+font-family: "Roboto", sans-serif;
+color: #020617; /* preto mais elegante */
+}
+
+form label {
+font-family: "Funnel Display", sans-serif;
+margin-top: 5px;
+color: #475569; /* cinza mais suave */
+}
+
+form ::placeholder {
+font-family: "Roboto", sans-serif;
+color: #9aa5b1; /* placeholder mais leve */
+}
+
+form input {
+padding: 10px;
+width: 150px;
+border-radius: 15px;
+border: 0 solid;
+background-color: #e2e8f0; /* input mais visível */
+color: #020617;
+}
+
+button {
+font-family: "Roboto", sans-serif;
+padding: 15px;
+width:150px;
+border-radius: 15px;
+margin-top: 20px;
+border: 0 solid;
+cursor: pointer;
+transition: 0.2s;
+color: #ffffff;
+background-color: #2563eb; /* azul moderno */
+}
+
+button:hover {
+transform: translateY(-2px);
+background-color: #1d4ed8; /* azul mais forte */
+}
+
+.resultado {
+position: absolute; 
+padding-top: 15px;
+ margin-top: 30px;
+width: 400px;
+max-width: 700px;
+height: 370px;
+background-color: #f8fafc; /* branco levemente acinzentado */
+border-radius: 15px;
+padding-left: 30px;
+color: #020617;
+margin-left: 830px;
+animation: aparecer 0.8s ease forwards;
+opacity: 0;
+}
+
+
+@keyframes aparecer {
+    to {
+        transform: translateY(-50px);
+        opacity: 1;
+    }
+}
+
+.resultado h1 {
+ text-align: center;
+ margin-top:  10px;
+ color: #020617;
+ font-family: "Roboto", sans-serif; 
+}
+
+.resultado .vermelho {
+ color: #d30c05;
+ font-family: "Funnel Display", sans-serif; 
+}
+
+.resultado .azul {
+ color: #00098a;
+ font-family: "Funnel Display", sans-serif; 
+}
+
+.conteiner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}

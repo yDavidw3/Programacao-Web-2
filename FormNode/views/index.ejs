@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<div class="conteiner">
+
+    <form action="/enviarContato" method="POST">
+        <h1>Contato</h1>
+
+        <label>Nome</label>
+        <input type="text" name="nome" placeholder="Digite seu nome">
+
+        <label>E-mail</label>
+        <input type="email" name="email" placeholder="Digite seu email">
+
+        <label>Assunto</label>
+        <input type="text" name="assunto" placeholder="Assunto">
+
+        <label>Mensagem</label>
+        <textarea name="mensagem" rows="4" placeholder="Sua mensagem"></textarea>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+    <% if (nome) { %>
+    <div class="divResultado">
+        <h1 class="pResultado">Dados</h1>
+        <p class="pResultado">Nome: <%= nome %></p>
+        <p class="pResultado">E-mail: <%= email %></p>
+        <p class="pResultado">Assunto: <%= assunto %></p>
+        <p class="pResultado">Mensagem: <%= mensagem %></p>
+    </div>
+    <% } %>
+
+</div>
+
+</body>
+</html>

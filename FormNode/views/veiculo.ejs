@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro do Veículo</title>
+    <link rel="stylesheet" href="/veiculo.css">
+</head>
+<body>
+
+    <div class="conteiner">
+
+    <form action="/dadosVeiculo" method="POST">
+
+        <h1>Cadastro de Veículo </h1>
+
+        <label for="">Marca</label>
+        <input type="text" name="marca" id="marca" required>
+        <label for="">Modelo</label>
+        <input type="text" name="modelo" id="modelo" required>
+        <label for="">Ano de fabricação</label>
+        <input type="date" name="anoFabricacao" id="anoFabricacao" v>
+        <label for="">Cor</label>
+        <input type="text" name="cor" id="cor" required> 
+        <label for="">Placa</label>
+        <input type="text" name="placa" id="placa" required>
+        <label for="">Renavam</label>
+        <input type="number" name="renavam" id="renavam" required>
+        <label for="">Tipo do Veículo</label>
+        <input type="text" name="tipo" id="tipo" required>
+        <label for="">Preço</label>
+        <input type="number" name="preco" id="preco" required>
+
+        <button type="submit">Enviar</button>
+
+    </form>
+
+    <% if (marca && modelo && anoFabricacao && cor &&  placa &&  renavam &&  tipo &&  preco) { %>
+
+<% if (preco>=100000) { %>
+    <div class="resultado">
+        <h1>Dados do Veículo</h1>
+        <p class="vermelho">Marca: <%= marca %></p>
+        <p class="vermelho">Modelo: <%= modelo %></p>
+        <p class="vermelho">Ano de Fabricação: <%= anoFabricacao %></p>  
+        <p class="vermelho">Cor: <%= cor %></p>
+        <p class="vermelho">Placa: <%= placa %></p>
+        <p class="vermelho">Renavam: <%= renavam %></p>
+        <p class="vermelho">Tipo do Veículo: <%= tipo %></p>
+        <p class="vermelho">Preço: <%= preco %></p>
+    </div>
+    <% } else {%>
+        <div class="resultado">
+        <h1>Dados do Veículo</h1>
+        <p class="azul">Marca: <%= marca %></p>
+        <p class="azul">Modelo: <%= modelo %></p>
+        <p class="azul">Ano de Fabricação: <%= anoFabricacao %></p>  
+        <p class="azul">Cor: <%= cor %></p>
+        <p class="azul">Placa: <%= placa %></p>
+        <p class="azul">Renavam: <%= renavam %></p>
+        <p class="azul">Tipo do Veículo: <%= tipo %></p>
+        <p class="azul">Preço: <%= preco %></p>
+    </div>
+        <% } %>
+
+ <% } %>
+
+</div>
+    
+</body>
+</html>
