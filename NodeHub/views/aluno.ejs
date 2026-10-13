@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aluno</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/reajuste">Reajuste</a></li>
+            <li><a href="/imc">IMC</a></li>
+            <li><a href="/aluno">Aluno</a></li>
+            <li><a href="/pagamento">Pagamento</a></li>
+            
+        </ul>
+    </nav>
+
+    <div class="container1">
+        <h1 class="rjtitle">Calculadora de Média:</h1>
+
+        <form action="/aluno" method="get">
+            <input type="number" name="nota1" placeholder="Digite a primeira nota" min="0" step="0.01" required>
+            <input type="number" name="nota2" placeholder="Digite a segunda nota" min="0" step="0.01" required>
+            <input type="number" name="nota3" placeholder="Digite a terceira nota" min="0" step="0.01" required>
+            <input type="number" name="nota4" placeholder="Digite a quarta nota" min="0" step="0.01" required>
+            <button class="calcular" type="submit">Calcular Média</button>
+        </form>
+
+        <p class="resultado">Primeira nota: <%= nota1 %></p>
+        <p class="resultado">Segunda nota: <%= nota2 %></p>
+        <p class="resultado">Terceira nota: <%= nota3 %></p>
+        <p class="resultado">Quarta nota: <%= nota4 %></p>
+        <p class="resultado">A média do aluno foi de <%= media %>. Ele está <%= situação %></p>
+
+        <button class="novamente">
+            <a href="/aluno">Calcular novamente</a>
+        </button>
+    </div>
+
+</body>
+</html>

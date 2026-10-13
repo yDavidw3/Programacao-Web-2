@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reajuste</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/reajuste">Reajuste</a></li>
+            <li><a href="/imc">IMC</a></li>
+            <li><a href="/aluno">Aluno</a></li>
+            <li><a href="/pagamento">Pagamento</a></li>
+            
+        </ul>
+    </nav>
+
+    <div class="container1">
+        <h1 class="rjtitle">Reajuste de valor:</h1>
+        <form action="/reajuste" method="get">
+            <input type="number" name="valor" placeholder="Insira o valor para reajuste" min="0" step="0.01" required>
+            <input type="number" name="porcentagem" placeholder="Insira a porcentagem" min="0"  step="0.01" required>
+            <button class="calcular" type="submit">Reajustar valor</button>
+        </form>
+
+    
+        <p class="resultado">Valor inserido: R$ <%= valorinicial%></p>
+        <p class="resultado">Porcentagem aplicada: <%= porcentagem %>%</p>
+        <p class="resultado">O valor do reajuste é de R$ <%= valorDesconto %>
+            <br>
+            resultando em um novo valor total de <%= valorfinal %>.</p>
+
+        <button class="novamente">
+            <a href="/reajuste">Calcular novamente</a>
+        </button>
+    </div>
+
+</body>
+</html>
