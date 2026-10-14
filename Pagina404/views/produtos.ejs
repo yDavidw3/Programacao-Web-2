@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <header>
+
+    </header>
+
+    <section>
+        <h1> Produtos </h1>        
+    </section>
+
+    <section>
+        <ul>
+            <% listaProdutos.forEach(function(produto) { %>
+                <li>
+                    <strong>ID:</strong> <%= produto.id %>  
+                    <strong>Nome:</strong> <%= produto.nome %>  
+                    <strong>Preço:</strong> R$ <%= produto.preco.toFixed(2) %>
+                </li>
+            <% }); %>
+        </ul>
+    </section>
+
+</body>
+</html>
