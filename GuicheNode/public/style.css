@@ -1,0 +1,144 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:#f4f7fb;
+    color:#1f2937;
+    min-height:100vh;
+    padding:40px 20px;
+}
+
+/* container */
+.app{
+    max-width:900px;
+    margin:auto;
+}
+
+/* HEADER CENTRALIZADO */
+.topo{
+    display:flex;
+    justify-content:center;
+    margin-bottom:30px;
+}
+
+.logo{
+    font-size:1.6rem;
+    font-weight:800;
+    color:#0f766e;
+    letter-spacing:1px;
+}
+
+/* PAINEL PRINCIPAL */
+.painel{
+    background:white;
+    border-radius:30px;
+    padding:50px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,.05);
+}
+
+.subtitulo{
+    font-size:.85rem;
+    letter-spacing:4px;
+    color:#94a3b8;
+    font-weight:600;
+}
+
+.senha-atual{
+    font-size:clamp(90px,16vw,200px);
+    font-weight:800;
+    color:#0f766e;
+    line-height:1;
+    margin-top:10px;
+}
+
+/* GRID */
+.info{
+    margin-top:24px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+/* CARD SENHA */
+.card{
+    background:white;
+    border-radius:24px;
+    padding:30px;
+    box-shadow:0 10px 25px rgba(0,0,0,.05);
+}
+
+.label{
+    color:#64748b;
+    font-size:.95rem;
+}
+
+.senha-usuario{
+    font-size:3rem;
+    font-weight:800;
+    margin-top:10px;
+    color:#0f172a;
+}
+
+/* BOTÕES */
+.acoes{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+.acoes button{
+    border:none;
+    border-radius:16px;
+    background:#0f766e;
+    color:white;
+    font-size:1rem;
+    font-weight:600;
+    cursor:pointer;
+    padding:16px;
+    transition:.2s;
+}
+
+.acoes button:hover{
+    background:#115e59;
+    transform:translateY(-2px);
+}
+
+/* MENSAGEM BONITA CENTRALIZADA */
+.mensagem{
+    margin-top:24px;
+    display:flex;
+    justify-content:center;
+}
+
+.mensagem-card{
+    background:white;
+    border-left:6px solid #0f766e;
+    padding:18px 24px;
+    border-radius:18px;
+    box-shadow:0 10px 25px rgba(0,0,0,.05);
+    font-weight:600;
+    color:#0f172a;
+    text-align:center;
+    max-width:100%;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+    .info{
+        grid-template-columns:1fr;
+    }
+
+    .painel{
+        padding:35px 20px;
+    }
+
+    .senha-atual{
+        font-size:100px;
+    }
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Atendimento</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<main class="app">
+
+    <header class="topo">
+        <div class="logo">Atendimento</div>
+    </header>
+
+    <section class="painel">
+        <span class="subtitulo">SENHA CHAMADA</span>
+        <div class="senha-atual"><%= senhaAtual %></div>
+    </section>
+
+    <section class="info">
+
+        <div class="card">
+            <span class="label">Sua senha</span>
+            <div class="senha-usuario"><%= senha %></div>
+        </div>
+
+        <div class="acoes">
+            <button onclick="location.href='/guiche'">Chamar próxima senha</button>
+            <button onclick="location.href='/guiche2'">Gerar senha</button>
+            <button onclick="location.href='/verificar'">Verificar atendimento</button>
+        </div>
+
+    </section>
+
+    <% if(mensagem){ %>
+        <div class="mensagem">
+            <div class="mensagem-card">
+                <%= mensagem %>
+            </div>
+        </div>
+    <% } %>
+
+</main>
+
+</body>
+</html>

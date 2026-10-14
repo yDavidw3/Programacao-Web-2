@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guichê</title>
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+    <div class="senha-guiche">
+
+        <div class="container-esquerdo">
+
+            <div class="barra-topo"></div>
+
+            <h2>Senha Atual</h2>
+
+            <div class="numero-senha"><%= senhaEspera %></div>
+
+            <div class="btn-chamar">
+                <button class="chamar-senha" onclick="window.location.href='/guiche2'">Chamar próxima senha</button>
+                <button id="nova-senha" onclick="window.location.href='/guiche'">Gerar nova senha</button>
+                <button class="botao-confirmar" onclick="window.location.href='/guiche2'">Essa é minha senha</button>
+            </div> 
+
+        </div>
+
+    </div>
+
+    <div class="minha-senha">
+        <span class="texto-senha">Sua senha é:</span>
+        <span class="valor-senha"><%= senhaNova %></span>
+    </div>
+
+</body>
+</html>
