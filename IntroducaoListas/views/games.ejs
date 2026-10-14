@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Produtos Games</title>
+    <link rel="stylesheet" href="/games.css">
+</head>
+<body>
+
+    <ul>
+
+        <% listaProdutosGames.forEach(function(produto) { %>
+            <li>
+                <img src="<%= produto.img %>" " alt="">
+
+                <div class="id">
+                    <strong>ID: </strong> <%= produto.id %>
+                </div>
+
+                <div class="nome">
+                    <strong>Nome: </strong> <%= produto.nome %>
+                </div>
+
+                <div class="preco">
+                    <strong>R$</strong> <%= produto.preco %>
+                </div>  
+                
+                <p><%= produto.descricao %></p>
+                
+            </li>
+        <% })   %>
+
+    </ul>
+    
+</body>
+</html>
